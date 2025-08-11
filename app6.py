@@ -131,12 +131,12 @@ def main():
                         st.rerun()
 
     # 导航按钮
-    nav_col2, nav_col3 = st.columns([1, 3])  # nav_col1, 
-    # with nav_col1:
-    #     if st.button("上一张") and st.session_state.index > 0:
-    #         save_score()
-    #         st.session_state.index -= 1
-    #         st.rerun()
+    nav_col1, nav_col2, nav_col3 = st.columns([1, 1, 3])  # 
+    with nav_col1:
+        if st.button("上一张") and st.session_state.index > 0:
+            save_score()
+            st.session_state.index -= 1
+            st.rerun()
     with nav_col2:
         if st.button("下一张") and st.session_state.index < total_ratings - 1:
             save_score()
@@ -174,7 +174,6 @@ def main():
             )
 
     # 页脚信息
-    st.markdown("请确认已完成当前图像的评分")
     st.markdown("---")
     st.markdown("**评分标准说明**")
     st.markdown("- **5分**: 优")
@@ -188,4 +187,5 @@ def main():
     st.markdown("- **无非特异性染色**: 背景干净、无染色伪影")
 
 if __name__ == "__main__":
+
     main()
