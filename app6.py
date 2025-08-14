@@ -174,6 +174,7 @@ def main():
             )
 
     # 页脚信息
+    st.markdown("请确认已完成当前图像的评分")
     st.markdown("---")
     st.markdown("**评分标准说明**")
     st.markdown("- **5分**: 优")
@@ -187,5 +188,4 @@ def main():
     st.markdown("- **无非特异性染色**: 背景干净、无染色伪影")
 
 if __name__ == "__main__":
-
     main()
